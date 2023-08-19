@@ -36,3 +36,5 @@ function Index(props) {
         </div>
     )
 }
+
+export default Index
