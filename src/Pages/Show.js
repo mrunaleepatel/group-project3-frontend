@@ -25,7 +25,7 @@ function Show(props) {
                 <input type="text" name="notes" placeholder="Place's Notes" defaultValue={place.notes} />
                 <input type="text" name="seasonToGo" placeholder="Place's Season To Go" defaultValue={place.seasonToGo} />
                 <input type="checkbox" name="visited" placeholder="Place Visited" />
-                <input className="button" type="submit" value="Update cheese"/>
+                <input className="button" type="submit" value="Update Place"/>
             </Form>
 
             <h1>Delete {place.name}</h1>
