@@ -10,7 +10,7 @@ function Show(props) {
             <h2>{place.country}</h2>
             <h2>{place.type}</h2>
             <img src={place.image} alt={place.name} />
-            <h2>{place.url}</h2>
+            <h2><a href={place.url}>{place.url}</a></h2>
             <h2>{place.notes}</h2>
             <h2>{place.seasonToGo}</h2>
             <h2>{place.visited}</h2>
