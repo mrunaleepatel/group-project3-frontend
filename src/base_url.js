@@ -1,0 +1,1 @@
+export const baseUrl = "https://group-project3-backend.onrender.com/"
