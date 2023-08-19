@@ -4,6 +4,9 @@ import { baseUrl } from "./base_url";
 // allow redirection function
 import { redirect } from "react-router-dom";
 
+//////////////////////////
+// CREATE ACTION
+//////////////////////////
 export const createAction = async ({request}) => {
     // get the data from the form in the request
     const formData = await request.formData()
@@ -32,9 +35,12 @@ export const createAction = async ({request}) => {
     })
 
     // redirect user back to index route
-    return redirect('/')
+    return redirect("/")
 }
 
+//////////////////////////
+// UPDATE ACTION
+//////////////////////////
 export const updateAction = async ({request, params}) => {
     // grab the id from the params
     const id = params.id
@@ -66,6 +72,9 @@ export const updateAction = async ({request, params}) => {
     return redirect(`/${id}`)
 }
 
+//////////////////////////
+// DELETE ACTION
+//////////////////////////
 export const deleteAction = async ({params}) => {
     // grab the id from the params
     const id = params.id
@@ -77,6 +86,6 @@ export const deleteAction = async ({params}) => {
         // no headers or body required for delete requests
     })
     // redirect back to the index route
-    return redirect('/')
+    return redirect("/")
 }
 
