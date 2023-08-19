@@ -36,9 +36,9 @@ HTML, CSS, SASS, JavaScript, MongoDB, Express.js, ReactJS
 
 ## Mockup of UI
 ### DESKTOP VIEWS
-![Desktop view of Index page](/P3-Index-Desktop-Wireframe.jpeg)
-![Desktop view of Show page](/P3-Show-Desktop-Wireframe.jpeg)
+![Desktop view of Index page](./src/Images/P3-Index-Desktop-Wireframe.jpeg)
+![Desktop view of Show page](./src/Images/P3-Show-Desktop-Wireframe.jpeg)
 
 ### MOBILE VIEWS
-![Mobile view of Index page](/P3-Index-Mobile-Wireframe.jpeg)
-![Mobile view of Show page](/P3-Show-Mobile-Wireframe.jpeg)
+![Mobile view of Index page](./src/Images/P3-Index-Mobile-Wireframe.jpeg)
+![Mobile view of Show page](./src/Images/P3-Show-Mobile-Wireframe.jpeg)
