@@ -8,15 +8,15 @@ import Show from "./Pages/Show";
 // import Signup from "./Pages/Signup";
 // import Login from "./Pages/Login";
 import { placesLoader, placeLoader } from "./loaders";
-// import { createAction, updateAction, deleteAction } from "./actions";
-// import { signupAction, loginAction } from "./actions"
+import { createAction } from "./actions";
+// import { updateAction, deleteAction, signupAction, loginAction } from "./actions"
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<App/>}>
         <Route path="" element={<Index/>} loader={placesLoader}/>
         <Route path=":id" element={<Show/>} loader={placeLoader}/>
-        {/* <Route path="create" action={createAction}/>
-        <Route path="update/:id" action={updateAction}/>
+        <Route path="create" action={createAction}/>
+        {/* <Route path="update/:id" action={updateAction}/>
         <Route delete="delete/:id" action={deleteAction}/> */}
     </Route>
 ));
