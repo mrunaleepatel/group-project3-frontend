@@ -66,3 +66,17 @@ export const updateAction = async ({request, params}) => {
     return redirect(`/${id}`)
 }
 
+export const deleteAction = async ({params}) => {
+    // grab the id from the params
+    const id = params.id
+    // send a delete request to our backend API
+    await fetch(`${baseUrl}/places/${id}`, {
+        // tell fetch to make a delete request
+        method: 'DELETE',
+        // credentials: 'include',
+        // no headers or body required for delete requests
+    })
+    // redirect back to the index route
+    return redirect('/')
+}
+
