@@ -24,7 +24,7 @@ function Show(props) {
                 <input type="text" name="url" placeholder="Place's Url" defaultValue={place.url} />
                 <input type="text" name="notes" placeholder="Place's Notes" defaultValue={place.notes} />
                 <input type="text" name="seasonToGo" placeholder="Place's Season To Go" defaultValue={place.seasonToGo} />
-                <input type="text" name="visited" placeholder="Visted" defaultValue={place.type} />
+                <input type="checkbox" name="visited" placeholder="Place Visited" />
                 <input className="button" type="submit" value="Update cheese"/>
             </Form>
 
