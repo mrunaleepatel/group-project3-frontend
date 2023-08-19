@@ -6,14 +6,14 @@ function Show(props) {
 
     return (
         <div className="place">
-            <h1>{place.name}</h1>
-            <h2>{place.country}</h2>
-            <h2>{place.type}</h2>
+            <h1>Name: {place.name}</h1>
+            <h2>Country: {place.country}</h2>
+            <h2>Type: {place.type}</h2>
             <img src={place.image} alt={place.name} />
             <h2><a href={place.url}>{place.url}</a></h2>
-            <h2>{place.notes}</h2>
-            <h2>{place.seasonToGo}</h2>
-            <h2>{place.visited}</h2>
+            <h2>Notes: {place.notes}</h2>
+            <h2>Season To Go: {place.seasonToGo}</h2>
+            <h2>Visited?: {place.visited}</h2>
 
             <h1>Edit {place.name}</h1>
             <Form action={`/update/${place._id}`} method="post">
