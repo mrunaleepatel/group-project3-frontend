@@ -1,10 +1,17 @@
-import {Link, useLoaderData, Form} from "react-router-dom";
+import {Link, useLoaderData, Form, useNavigate} from "react-router-dom";
+import { baseUrl } from "../base_url";
 
 function Index(props) {
     const places = useLoaderData();
+    const navigate = useNavigate();
 
     return (
         <div>
+            <button onClick={async () => {
+                await fetch(`${baseUrl}/logout`) 
+                localStorage.removeItem('loggedIn') 
+                navigate("/") 
+            }}>Logout</button>
             <h2>Create a Place</h2>
             <Form action="/create" method="post">
                 <input type="text" name="name" placeholder="Place Name" />
