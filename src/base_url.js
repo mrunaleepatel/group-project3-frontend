@@ -1,1 +1,1 @@
-export const baseUrl = "http://localhost:3500"
+export const baseUrl = "https://group-project3-backend.onrender.com"
