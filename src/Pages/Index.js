@@ -1,10 +1,40 @@
 import {Link, useLoaderData, Form, useNavigate} from "react-router-dom";
 import { baseUrl } from "../base_url";
+// auto complete
+import axios from "axios";
+import {Input, Card} from "antd"
+import React, { useEffect, useState } from "react";
 
 function Index(props) {
     const places = useLoaderData();
     const navigate = useNavigate();
 
+    //auto complete
+    const [countries, setCountries] = useState([]);
+    const [countryMatch, setCountryMatch] = useState([]);
+    //
+
+    //auto compelete//
+    useEffect(() => {
+        const loadCountries = async () => {
+            const response = await axios.get("https://restcountries.com/v2/all");
+            setCountries(response.data);
+        };
+
+        loadCountries();
+    }, []);
+
+    const searchCountries = (text) => {
+        let matches = countries.filter((country) => {
+            const regex = new RegExp(`${text}`, "gi");
+            return country.name.match(regex)
+        })
+        setCountryMatch(matches);
+    };
+
+    
+
+    ///////
     return (
         <div>
             <button onClick={async () => {
@@ -14,9 +44,22 @@ function Index(props) {
             }}>Logout</button>
             <h2>Create a Place</h2>
             <Form action="/create" method="post">
-                <input type="text" name="name" placeholder="Place Name" />
+                <input type="text" name="name" placeholder="Place Name" required/>
                 <input type="text" name="description" placeholder="Place Description" />
-                <input type="text" name="country" placeholder="Place Country" />
+
+
+
+                <Input type="text" name="country" placeholder="Place Country" onChange={(e) => searchCountries(e.target.value)}  />
+                {countryMatch && countryMatch.map((item, index) => (
+                    <div key={index}>
+                        <Card title={`${item.name}`}>
+                            {item.name}
+                        </Card>
+                    </div>
+                ))}
+
+                
+
                 <input type="text" name="image" placeholder="Place Image" />
                 <input type="text" name="url" placeholder="Place Url" />
                 <input type="text" name="notes" placeholder="Place Notes" />

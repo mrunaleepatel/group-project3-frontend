@@ -4,6 +4,8 @@ import reportWebVitals from './reportWebVitals';
 import {RouterProvider} from 'react-router-dom';
 import router from './router';
 import './styles.scss';
+// auto compelete
+// import "antd/dist/antd.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
