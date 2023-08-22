@@ -12,6 +12,8 @@ function Index(props) {
     //auto complete
     const [countries, setCountries] = useState([]);
     const [countryMatch, setCountryMatch] = useState([]);
+    const [input, setInput] = useState("");
+    const [goAway, setGoAway] = useState(false)
     //
 
     //auto compelete//
@@ -24,10 +26,9 @@ function Index(props) {
         loadCountries();
     }, []);
 
-    const searchCountries = (text) => {
+    const searchCountries = () => {
         let matches = countries.filter((country) => {
-            const regex = new RegExp(`${text}`, "gi");
-            return country.name.match(regex)
+            return country.name.toLowerCase().indexOf(input.toLowerCase()) > -1;
         })
         setCountryMatch(matches);
     };
@@ -49,10 +50,21 @@ function Index(props) {
 
 
 
-                <Input type="text" name="country" placeholder="Place Country" onChange={(e) => searchCountries(e.target.value)}  />
-                {countryMatch && countryMatch.map((item, index) => (
-                    <div key={index}>
-                        <Card title={`${item.name}`}>
+                <Input type="text" name="country" placeholder="Place Country" 
+                value = {input}
+                onChange={(e) => {
+                    searchCountries(e.target.value)
+                    setInput(e.target.value)
+                    setGoAway(false)
+                    }
+                }  />
+                {!goAway && countryMatch && countryMatch.map((item, index) => (
+                    <div key={index} onClick={() => {
+                        setInput(item.name)
+                        setGoAway(true)
+                    }}>
+
+                        <Card title={`${item.name}`} >
                             {item.name}
                         </Card>
                     </div>
