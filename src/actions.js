@@ -46,6 +46,8 @@ export const updateAction = async ({request, params}) => {
     const id = params.id
     // grab data from the form
     const formData = await request.formData()
+    // turn visited into boolean
+    formData.get('visited') = formData.get('visited') === "on" ? true : false
     // build out the updated place
     const updatedPlace = {
         name: formData.get('name'),
