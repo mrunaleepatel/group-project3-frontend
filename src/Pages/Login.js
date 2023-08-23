@@ -1,13 +1,13 @@
 import { Form } from "react-router-dom";
 
 function Login(props){
-    return <div>
-        <h1>Login Form</h1>
+    return <div className="login-form">
+        <h2>Login</h2>
         <Form action="/login" method="post">
-            <label>Username</label>
-            <input type="text" name="username" placeholder="username" />
-            <label>Password</label>
-            <input type="password" name="password" placeholder="password" />
+            <label htmlFor="username">Username</label>
+            <input type="text" name="username" placeholder="Username" />
+            <label htmlFor="password">Password</label>
+            <input type="password" name="password" placeholder="Password" /><br/>
             <input type="submit" value="Login" />
         </Form>
     </div>

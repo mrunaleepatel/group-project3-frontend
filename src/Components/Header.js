@@ -4,7 +4,7 @@ function Header() {
     return (
         <div className='header'>
             <div className='logo'>
-            <Link to="/"><img src="../Images/logo.jpg" alt="BonVoyage"/></Link>
+            <Link to="/"><img src="src/Images/logo.jpg" alt="BonVoyage"/></Link>
             </div>
             <div className='navbar'>
                 <ul>
