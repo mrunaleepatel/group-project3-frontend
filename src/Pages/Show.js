@@ -1,8 +1,18 @@
 import { useLoaderData, Form } from "react-router-dom";
+//checkbox
+import React, { useState } from "react";
+//
 
 function Show(props) {
 
     const place = useLoaderData();
+
+    //checkbox//
+    const [checked, setChecked] = useState(false);
+    const handleChange = () => {
+        setChecked(!checked);
+    }
+    //
 
     return (
         <div>
@@ -20,7 +30,7 @@ function Show(props) {
                 <h3>Additional Notes: </h3>
                 <p>{place.notes}</p>
                 <h3>Season to Go: {place.seasonToGo}</h3>
-                <h3>Visited?: {place.visited}</h3>
+                <h3>Visited?: {place.visited ? "visited" : "not visited"}</h3>
             </div>
         </div>
 
@@ -42,7 +52,7 @@ function Show(props) {
                 <label htmlFor="seasonToGo">Best Season to Go: </label>
                 <input type="text" name="seasonToGo" placeholder="Best Season To Go" defaultValue={place.seasonToGo} />
                 <label htmlFor="visited">Visited yet? </label>
-                <input type="checkbox" name="visited" />
+                <input type="checkbox" name="visited" value={checked} onChange={handleChange} />
                 <input className="button" type="submit" value="Update Place"/>
             </Form>
         </div>
