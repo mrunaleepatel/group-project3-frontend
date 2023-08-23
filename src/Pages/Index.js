@@ -16,6 +16,14 @@ function Index(props) {
     const [goAway, setGoAway] = useState(false)
     //
 
+    //checkbox//
+    const [checked, setChecked] = useState(false);
+    console.log({checked})
+    const handleChange = () => {
+        setChecked(!checked);
+    }
+    //
+
     //auto compelete//
     useEffect(() => {
         const loadCountries = async () => {
@@ -85,7 +93,7 @@ function Index(props) {
                 <label htmlFor="notes">Additional Notes: </label>
                 <input type="text" name="notes" placeholder="The Lizzie McGuire Movie" /> <br/>
                 <label htmlFor="visited">Visited yet? </label>
-                <input type="checkbox" name="visited" /><br/>
+                <input type="checkbox" name="visited" value={checked} onChange={handleChange} /><br/>
                 <input type="submit" value="Add Place" />
             </Form>
             </div>
@@ -105,7 +113,7 @@ function Index(props) {
                         <p>{place.url}</p>
                         <p>{place.notes}</p>
                         <p>{place.seasonToGo}</p>
-                        <p>{place.visited}</p> */}
+                        <p>{place.visited ? "visited" : "not visited"}</p> */}
                     </div>
                 );
             })}
