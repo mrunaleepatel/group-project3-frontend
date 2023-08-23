@@ -14,12 +14,19 @@
 // INDEX (/wherever we use map method)
 // div for that section/container, ul for the function, li for each place
 
-// FORMS
+// SHOW
+    // .place-container {}
+    // .place-display {} (for the photo of the place and the name of it underneath)
+    // .place-details {} (for the other details about the place)
+
+// FORMS -- maybe one style for all forms, or a couple of them -- have to think that through a bit more
 // .signup-form {}
 // .login-form {}
 // .create-form {}
+// .edit-form {}
 
 // BUTTONS should be the same for DELETE, EDIT, LOGIN, SIGNUP
-// logout-button {} -- might change if we add into nav bar?
+// .logout-button {} -- might change if we add into nav bar?
+// .delete-button {} (in Show.js)
 
 // Mobile-first -- MEDIA QUERIES use min-width instead of max-width 
