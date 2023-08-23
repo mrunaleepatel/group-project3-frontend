@@ -50,8 +50,8 @@ function Index(props) {
             <Form action="/create" method="post">
                 <label htmlFor="name">Name of Place: </label>
                 <input type="text" name="name" placeholder="Trevi Fountain" required/>
-                <label htmlFor="description">Type of Place: </label>
-                <input type="text" name="description" placeholder="Monument" /><br/>
+                <label htmlFor="type">Type of Place: </label>
+                <input type="text" name="type" placeholder="Monument" /><br/>
 
 
 
@@ -97,7 +97,7 @@ function Index(props) {
                         <Link to={`/${place._id}`}>
                             {place.name}
                         </Link>
-                        <p>{place.description}</p>
+                        <p>{place.type}</p>
                         <p>{place.country}</p>
                         <img src={place.image} alt={place.name} />
                         <p>{place.url}</p>
