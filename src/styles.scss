@@ -7,6 +7,90 @@
     // background image for LOGIN/SIGNUP PAGE
     // background image (maybe subtle pattern for INDEX and SHOW)
 
+body {
+        background-image: url(./Images/background-image.jpg);
+        background-size: cover;
+        
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 63, 63, 0.5); 
+    z-index: -1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #F37053;
+    font-family: "Ayuthaya";
+    font-size: 20px;
+}
+
+.header .logo img {
+    width: 200px;
+}
+
+.header .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header .navbar ul li {
+    margin-left: 1rem;
+}
+
+.header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+// MAIN 
+div {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+button {
+    background: #F6AFCE;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Vonique 92', sans-serif;
+    
+}
+
+button:hover {
+    background: #F37053;
+}
+
+.active {
+    background: #03a9f4;
+}
+
+.active:hover {
+    background: #0288d1; 
+}
 
 // NAV BAR
 
@@ -21,7 +105,86 @@
 
 // FORMS -- maybe one style for all forms, or a couple of them -- have to think that through a bit more
 // .signup-form {}
+.signup-form  {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: "Ayuthaya";
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.signup-form input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.signup-form input[type="submit"] {
+    background: #F6AFCE;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-form input[type="submit"]:hover {
+    background: #F37053;
+}
 // .login-form {}
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: "Ayuthaya";
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.login-form input[type="submit"] {
+    background: #F6AFCE;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background: #F37053;
+}
+
 // .create-form {}
 // .edit-form {}
 
