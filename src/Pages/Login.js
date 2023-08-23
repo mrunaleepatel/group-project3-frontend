@@ -8,7 +8,7 @@ function Login(props){
             <input type="text" name="username" placeholder="Username" />
             <label htmlFor="password">Password</label>
             <input type="password" name="password" placeholder="Password" /><br/>
-            <input type="submit" value="Login" />
+            <input type="submit" value="Login" className="buttons"/>
         </Form>
     </div>
 }
