@@ -93,17 +93,19 @@ function Index(props) {
             <div className="places-container">
             {places.map((place, index) => {
                 return (
-                    <div key={place._id} className="place">
-                        <Link to={`/${place._id}`}>
+                    <div key={place._id} className="places-list">
+                        <ul>
+                            <li><Link to={`/${place._id}`}>
                             {place.name}
-                        </Link>
-                        <p>{place.type}</p>
+                            </Link></li>
+                        </ul>
+                        {/* <p>{place.type}</p>
                         <p>{place.country}</p>
                         <img src={place.image} alt={place.name} />
                         <p>{place.url}</p>
                         <p>{place.notes}</p>
                         <p>{place.seasonToGo}</p>
-                        <p>{place.visited}</p>
+                        <p>{place.visited}</p> */}
                     </div>
                 );
             })}
