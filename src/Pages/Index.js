@@ -38,19 +38,25 @@ function Index(props) {
     ///////
     return (
         <div>
-            <button onClick={async () => {
-                await fetch(`${baseUrl}/logout`) 
-                localStorage.removeItem('loggedIn') 
-                navigate("/") 
-            }}>Logout</button>
-            <h2>Create a Place</h2>
+            <div className="logout-button">
+                <button onClick={async () => {
+                    await fetch(`${baseUrl}/logout`)
+                    localStorage.removeItem('loggedIn') 
+                    navigate("/")}}>Logout</button>
+            </div>
+
+            <div className="create-form">
+            <h2>Add A New Place</h2>
             <Form action="/create" method="post">
-                <input type="text" name="name" placeholder="Place Name" required/>
-                <input type="text" name="description" placeholder="Place Description" />
+                <label htmlFor="name">Name of Place: </label>
+                <input type="text" name="name" placeholder="Trevi Fountain" required/>
+                <label htmlFor="description">Type of Place: </label>
+                <input type="text" name="description" placeholder="Monument" /><br/>
 
 
 
-                <Input type="text" name="country" placeholder="Place Country" 
+                <label htmlFor="country">Location (Country): </label>
+                <Input type="text" name="country" placeholder="Italy" 
                 value = {input}
                 onChange={(e) => {
                     searchCountries(e.target.value)
@@ -70,15 +76,21 @@ function Index(props) {
                     </div>
                 ))}
 
-                
-
-                <input type="text" name="image" placeholder="Place Image" />
-                <input type="text" name="url" placeholder="Place Url" />
-                <input type="text" name="notes" placeholder="Place Notes" />
-                <input type="text" name="seasonToGo" placeholder="Place Season To Go" />
-                <input type="checkbox" name="visited" placeholder="Place Visited" />
-                <input type="submit" value="Create Place" />
+                <label htmlFor="image">Image URL of Place: </label>
+                <input type="text" name="image" placeholder="https://romesite.com/images/trevi_fountain.jpg" />
+                <label htmlFor="url">Website: </label>
+                <input type="text" name="url" placeholder="https://romesite.com/trevi-fountain.html" />
+                <label htmlFor="seasonToGo">Best Season to Go: </label>
+                <input type="text" name="seasonToGo" placeholder="Spring and Fall" /><br/>
+                <label htmlFor="notes">Additional Notes: </label>
+                <input type="text" name="notes" placeholder="The Lizzie McGuire Movie" /> <br/>
+                <label htmlFor="visited">Visited yet? </label>
+                <input type="checkbox" name="visited" /><br/>
+                <input type="submit" value="Add Place" />
             </Form>
+            </div>
+
+            <div className="places-container">
             {places.map((place, index) => {
                 return (
                     <div key={place._id} className="place">
@@ -95,6 +107,8 @@ function Index(props) {
                     </div>
                 );
             })}
+           </div>
+
         </div>
     )
 }
