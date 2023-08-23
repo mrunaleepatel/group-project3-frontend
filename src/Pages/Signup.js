@@ -8,7 +8,7 @@ function Signup(props){
             <input type="text" name="username" id="username" />
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" /><br/>
-            <input type="submit" value="Signup" />
+            <input type="submit" value="Signup" className="buttons" />
         </Form>
     </div>
 }

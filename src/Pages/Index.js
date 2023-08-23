@@ -1,4 +1,4 @@
-import {Link, useLoaderData, Form, useNavigate} from "react-router-dom";
+import {Link, useLoaderData, Form } from "react-router-dom";
 import { baseUrl } from "../base_url";
 // auto complete
 import axios from "axios";
@@ -7,7 +7,6 @@ import React, { useEffect, useState } from "react";
 
 function Index(props) {
     const places = useLoaderData();
-    const navigate = useNavigate();
 
     //auto complete
     const [countries, setCountries] = useState([]);
@@ -46,12 +45,6 @@ function Index(props) {
     ///////
     return (
         <div>
-            <div className="logout-button">
-                <button onClick={async () => {
-                    await fetch(`${baseUrl}/logout`)
-                    localStorage.removeItem('loggedIn') 
-                    navigate("/")}}>Logout</button>
-            </div>
 
             <div className="create-form">
             <h2>Add A New Place</h2>
@@ -94,7 +87,7 @@ function Index(props) {
                 <input type="text" name="notes" placeholder="The Lizzie McGuire Movie" /> <br/>
                 <label htmlFor="visited">Visited yet? </label>
                 <input type="checkbox" name="visited" value={checked} onChange={handleChange} /><br/>
-                <input type="submit" value="Add Place" />
+                <input type="submit" value="Add Place" className="buttons"/>
             </Form>
             </div>
 

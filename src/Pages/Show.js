@@ -53,14 +53,14 @@ function Show(props) {
                 <input type="text" name="seasonToGo" placeholder="Best Season To Go" defaultValue={place.seasonToGo} />
                 <label htmlFor="visited">Visited yet? </label>
                 <input type="checkbox" name="visited" value={checked} onChange={handleChange} />
-                <input className="button" type="submit" value="Update Place"/>
+                <input type="submit" value="Update Place" className="buttons"/>
             </Form>
         </div>
             
             <div className="delete-button">
             <h2>Delete {place.name}</h2>
                 <Form action={`/delete/${place._id}`} method="post">
-                     <input type="submit" value="Delete Place"/>
+                     <input type="submit" value="Delete Place" className="buttons"/>
                 </Form>
             </div>
         </div>
