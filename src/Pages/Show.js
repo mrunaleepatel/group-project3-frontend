@@ -19,8 +19,8 @@ function Show(props) {
         <div className="place-container">
             
             <div className="place-display">
-                <img src={place.image} alt={place.name} />
-                <h1>{place.name}</h1> 
+                <img className="show-image" src={place.image} alt={place.name} />
+                <h1 className="show-place-name">{place.name}</h1> 
             </div>
 
             <div className="place-details">

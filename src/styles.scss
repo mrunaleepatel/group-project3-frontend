@@ -240,3 +240,46 @@ h1 {
 // .edit-form {}
 
 // Mobile-first -- MEDIA QUERIES use min-width instead of max-width 
+// mobile - show
+@media (max-width: 375px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        padding-left: 15px;
+        background: #F37053;
+        font-family: "Ayuthaya";
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .header .navbar {
+        margin-top: 10px;
+    }
+    .header .navbar ul {
+        flex-direction: column;
+        margin: 0;
+    }
+    .header .navbar li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .place-container {
+        
+        background-color: beige;
+        
+    }
+
+    .show-image {
+        width: 95%;
+    }
+
+    .place-details {
+        
+    }
+
+    .show-place-name {
+        color: black;
+    }
+}
