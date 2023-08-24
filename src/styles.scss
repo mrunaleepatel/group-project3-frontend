@@ -39,24 +39,37 @@ body::before {
     width: 200px;
 }
 
+.header .navbar button {
+    background-color: transparent;
+    border: none;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    color: #fff;
+}
+
+.header .navbar button:hover {
+    text-decoration: underline;
+}
+
 .header .navbar ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-}
 
-.header .navbar ul li {
-    margin-left: 1rem;
-}
+    li {
+        margin-left: 1rem;
 
-.header .navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
 
-.header .navbar ul li a:hover {
-    text-decoration: underline;
+    li:hover {
+        text-decoration: underline white;
+    }
 }
 
 // MAIN 
