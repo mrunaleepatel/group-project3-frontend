@@ -1,7 +1,9 @@
 import logo from '../Images/logo.png';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
+import { baseUrl } from '../base_url';
 
 function Header() {
+    const navigate = useNavigate();
     return (
         <div className='header'>
             <div className='logo'>
@@ -11,11 +13,13 @@ function Header() {
     </div>
             <div className='navbar'>
                 <ul>
-                    {/* HERE IS WHERE DROPDOWN MENU CODE SHOULD GO */}
-                    <Link to="/"><li>Add New</li></Link>
-                    <Link><li>About</li></Link>
+                    <li><Link to="/">Add New</Link></li>
+                    <li><Link>About</Link></li>
                     <li><a href="#">Ideas</a></li>
-                    <Link><li>Logout</li></Link>
+                    <li><button onClick={async () => {
+                        await fetch(`${baseUrl}/logout`)
+                        localStorage.removeItem('loggedIn')
+                        navigate("/")}}>Logout</button></li>
                 </ul>
             </div>
         </div>

@@ -6,7 +6,9 @@ function Main(props){
         <div className="buttons">
         <Link to="/signup"><button><h3>Signup</h3></button></Link>
         
-        <Link to="/login"><button><h3>Login</h3></button></Link>
+        <Link to="/signup"><button className='buttons' >Signup</button></Link>
+        
+        <Link to="/login"><button className='buttons' >Login</button></Link>
 
         <Outlet />
         </div>

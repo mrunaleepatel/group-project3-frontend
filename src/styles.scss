@@ -41,6 +41,19 @@ body::before {
     width: 70px;
 }
 
+.header .navbar button {
+    background-color: transparent;
+    border: none;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    color: #fff;
+}
+
+.header .navbar button:hover {
+    text-decoration: underline;
+}
+
 img {
     width: 100px;
 }
@@ -48,21 +61,22 @@ img {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-.header .navbar ul li {
-    margin-left: 1rem;
-}
+    li {
+        margin-left: 1rem;
 
-.header .navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
 
-.header .navbar ul li a:hover {
-    text-decoration: underline;
-}
+    li:hover {
+        text-decoration: underline white;
+    }
+
 
 // MAIN 
 div {
@@ -78,7 +92,7 @@ h1 {
 
 
 
-button {
+.buttons {
     background: #F6AFCE;
     color: #fff;
     padding: 0rem 1.5rem;
@@ -87,7 +101,7 @@ button {
     cursor: pointer;    
 }
 
-button:hover {
+.buttons:hover {
     background: #F37053;
 }
 
