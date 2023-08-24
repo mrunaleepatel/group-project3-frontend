@@ -33,7 +33,7 @@ body::before {
     padding: 5px;
     padding-left: 15px;
     background: #F37053;
-    font-family: 'Vonique 92', sans-serif;
+    font-family: "Ayuthaya";
     font-size: 18px;
     font-weight: 600;
 }
@@ -49,6 +49,7 @@ body::before {
     font: inherit;
     border-radius: 0;
     color: #fff;
+    cursor: pointer;
 }
 
 .header .navbar button:hover {
@@ -61,8 +62,9 @@ img {
 .header .navbar ul {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    margin: 13px;
+    padding: 0px;
+    font-size: 20px
 }
 
     li {
@@ -87,7 +89,7 @@ div {
 }
 
 h1 {
-    font-size: 1.7rem;
+    font-size: 30px;
     margin: 2rem 0;
     font-family: 'Righteous', cursive;
     color: whitesmoke;
@@ -96,24 +98,30 @@ h1 {
 
 
 .buttons {
-    background: #F6AFCE;
+    background: #F37053;
     color: #fff;
-    padding: 0rem 1.5rem;
-    margin: 0 0.5rem;
+    padding: 1rem 1.5rem;
+    margin: 2px 0.5rem;
     border-radius: 20px;
-    cursor: pointer;    
+    cursor: pointer;
+    font-family: 'Exo', sans-serif;   
+    font-size: 16px; 
+    font-weight: 500;
 }
 
 .buttons:hover {
-    background: #F37053;
+    background: #F6AFCE;
+    color: purple;
 }
 
 .active {
-    background: #03a9f4;
+    background: #F6AFCE;
+    color: purple;
 }
 
 .active:hover {
-    background: #0288d1; 
+    background: #F6AFCE;
+    color: purple; 
 }
 
 // INDEX (/wherever we use map method)
@@ -134,59 +142,13 @@ h1 {
     width: 300px;
     margin: 0 auto;
     border: 1px solid #ccc;
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 5px;
     margin-top: 20px;
 
     h2 {
         text-align: center;
-        margin-bottom: 1rem;
-        font-family: "Ayuthaya";
-        color: whitesmoke;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-family: 'Vonique 92', sans-serif;
-        color: whitesmoke;
-        font-size: 5px;
-    }
-
-    input {
-        display: block;
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-    }
-
-    input[type="submit"] {
-        background: #F6AFCE;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-        background: #F37053;
-    }
-}
-
-
-// LOGIN FORM
-.login-form {
-    width: 300px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-top: 20px;
-
-    h2 {
-        text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         font-family: "Ayuthaya";
         color: whitesmoke;
         text-decoration: underline;
@@ -197,8 +159,8 @@ h1 {
         display: block;
         margin-bottom: 5px;
         color: whitesmoke;
-        font-family: 'Vonique 92', sans-serif;
-        font-size: 12px;
+        font-family: 'Exo', sans-serif;
+        font-size: 15px;
     }
 
     input {
@@ -211,14 +173,66 @@ h1 {
     }
 
     input[type="submit"] {
-        background: #F6AFCE;
+        background: #F37053;
         color: #fff;
         border: none;
         cursor: pointer;
+        border-radius: 20px;
     }
 
     input[type="submit"]:hover {
+        background: #F6AFCE;
+        color: purple;
+    }
+}
+
+
+// LOGIN FORM
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 3rem;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-family: "Ayuthaya";
+        color: whitesmoke;
+        text-decoration: underline;
+        padding-bottom: 1px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: whitesmoke;
+        font-family: 'Exo', sans-serif;
+        font-size: 15px;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    input[type="submit"] {
         background: #F37053;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    input[type="submit"]:hover {
+        background: #F6AFCE;
+        color: purple;
     }
 }
 
