@@ -29,14 +29,16 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 5px;
+    padding-left: 15px;
     background: #F37053;
-    font-family: "Ayuthaya";
-    font-size: 20px;
+    font-family: 'Vonique 92', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.header .logo img {
-    width: 200px;
+.header .logo {
+    width: 70px;
 }
 
 .header .navbar button {
@@ -52,11 +54,15 @@ body::before {
     text-decoration: underline;
 }
 
+img {
+    width: 100px;
+}
 .header .navbar ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
+}
 
     li {
         margin-left: 1rem;
@@ -70,7 +76,7 @@ body::before {
     li:hover {
         text-decoration: underline white;
     }
-}
+
 
 // MAIN 
 div {
@@ -78,19 +84,21 @@ div {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 2rem 0;
+    font-family: 'Righteous', cursive;
+    color: whitesmoke;
 }
+
+
 
 .buttons {
     background: #F6AFCE;
     color: #fff;
-    padding: 1rem 2rem;
-    margin: 0 1rem;
+    padding: 0rem 1.5rem;
+    margin: 0 0.5rem;
     border-radius: 20px;
-    cursor: pointer;
-    font-family: 'Vonique 92', sans-serif;
-    
+    cursor: pointer;    
 }
 
 .buttons:hover {
@@ -131,11 +139,15 @@ h1 {
     text-align: center;
     margin-bottom: 1rem;
     font-family: "Ayuthaya";
+    color: whitesmoke;
 }
 
 .signup-form label {
     display: block;
     margin-bottom: 0.5rem;
+    font-family: 'Vonique 92', sans-serif;
+    color: whitesmoke;
+    font-size: 5px;
 }
 
 .signup-form input {
@@ -171,11 +183,17 @@ h1 {
     text-align: center;
     margin-bottom: 1rem;
     font-family: "Ayuthaya";
+    color: whitesmoke;
+    text-decoration: underline;
+    padding-bottom: 1px;
 }
 
 .login-form label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    font-family: 'Vonique 92', sans-serif;
+    font-size: 12px;
 }
 
 .login-form input {
