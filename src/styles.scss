@@ -2,11 +2,9 @@
 
 // FAVICON in tab view
 
-// BODY - fonts, text color
-// body {}
-    // background image for LOGIN/SIGNUP PAGE
-    // background image (maybe subtle pattern for INDEX and SHOW)
-
+/////////////////////
+/// BODY
+/////////////////////
 body {
         background-image: url(./Images/background-image.jpg);
         background-size: cover;
@@ -25,6 +23,9 @@ body::before {
     z-index: -1;
 }
 
+/////////////////////
+/// HEADER
+/////////////////////
 .header {
     display: flex;
     justify-content: space-between;
@@ -78,7 +79,9 @@ img {
     }
 
 
-// MAIN 
+/////////////////////
+/// MAIN 
+/////////////////////
 div {
     text-align: center;
 }
@@ -113,9 +116,6 @@ h1 {
     background: #0288d1; 
 }
 
-// NAV BAR
-
-
 // INDEX (/wherever we use map method)
 // div for that section/container, ul for the function, li for each place
 
@@ -124,8 +124,12 @@ h1 {
     // .place-display {} (for the photo of the place and the name of it underneath)
     // .place-details {} (for the other details about the place)
 
-// FORMS -- maybe one style for all forms, or a couple of them -- have to think that through a bit more
-// .signup-form {}
+
+/////////////////////
+/// FORMS
+/////////////////////
+
+// SIGNUP FORM
 .signup-form  {
     width: 300px;
     margin: 0 auto;
@@ -133,43 +137,45 @@ h1 {
     padding: 1rem;
     border-radius: 5px;
     margin-top: 20px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: "Ayuthaya";
+        color: whitesmoke;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-family: 'Vonique 92', sans-serif;
+        color: whitesmoke;
+        font-size: 5px;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    input[type="submit"] {
+        background: #F6AFCE;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background: #F37053;
+    }
 }
 
-.signup-form h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-family: "Ayuthaya";
-    color: whitesmoke;
-}
 
-.signup-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-family: 'Vonique 92', sans-serif;
-    color: whitesmoke;
-    font-size: 5px;
-}
-
-.signup-form input {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.signup-form input[type="submit"] {
-    background: #F6AFCE;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.signup-form input[type="submit"]:hover {
-    background: #F37053;
-}
-// .login-form {}
+// LOGIN FORM
 .login-form {
     width: 300px;
     margin: 0 auto;
@@ -177,50 +183,46 @@ h1 {
     padding: 1rem;
     border-radius: 5px;
     margin-top: 20px;
-}
 
-.login-form h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-family: "Ayuthaya";
-    color: whitesmoke;
-    text-decoration: underline;
-    padding-bottom: 1px;
-}
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: "Ayuthaya";
+        color: whitesmoke;
+        text-decoration: underline;
+        padding-bottom: 1px;
+    }
 
-.login-form label {
-    display: block;
-    margin-bottom: 5px;
-    color: whitesmoke;
-    font-family: 'Vonique 92', sans-serif;
-    font-size: 12px;
-}
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: whitesmoke;
+        font-family: 'Vonique 92', sans-serif;
+        font-size: 12px;
+    }
 
-.login-form input {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
+    input {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
 
-.login-form input[type="submit"] {
-    background: #F6AFCE;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
+    input[type="submit"] {
+        background: #F6AFCE;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
 
-.login-form input[type="submit"]:hover {
-    background: #F37053;
+    input[type="submit"]:hover {
+        background: #F37053;
+    }
 }
 
 // .create-form {}
 // .edit-form {}
-
-// BUTTONS should be the same for DELETE, EDIT, LOGIN, SIGNUP
-// .logout-button {} -- might change if we add into nav bar?
-// .delete-button {} (in Show.js)
 
 // Mobile-first -- MEDIA QUERIES use min-width instead of max-width 
