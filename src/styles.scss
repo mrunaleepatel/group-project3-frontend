@@ -568,7 +568,7 @@ img {
 
 // MEDIA QUERIES use min-width instead of max-width 
 // mobile - show
-@media (max-width: 375px) {
+@media (max-width: 770px) {
     .header {
         display: flex;
         justify-content: space-between;
@@ -596,19 +596,43 @@ img {
     }
 
     .place-container {
+        margin-top: 5px;
         background-color: beige;
+        font-family: 'Exo', sans-serif;
     }
 
     .show-image {
+        margin-top: 10px;
         width: 95%;
     }
 
-    // .place-details {
-        
-    // }
+    .place-details {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .edit-form {
+        background-color: beige;
+        margin-top: 5px;
+        text-align: left;
+        font-family: 'Exo', sans-serif;
+        padding-left: 20px;
+    }
+
+    .edit-place-name {
+        text-align: center;
+        font-family: 'Righteous', cursive;
+    }
 
     .show-place-name {
         color: black;
+        font-family: 'Righteous', cursive;
+    }
+
+    .delete-button {
+        background-color: beige;
+        margin-top: 5px;
+        font-family: 'Righteous', cursive;
     }
 }
 
