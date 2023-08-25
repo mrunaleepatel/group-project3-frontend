@@ -88,19 +88,20 @@ function Index(props) {
                 <input type="text" name="notes" placeholder="The Lizzie McGuire Movie" /> <br/>
                 <label htmlFor="visited">Visited yet? </label>
                 <input type="checkbox" name="visited" value={checked} onChange={handleChange} /><br/>
-                <input type="submit" value="Create" className="create-button"/>
+                <input type="submit" value="Create" className="buttons"/>
             </Form>
             </div>
 
+            <h1>My Places</h1>
             <div className="places-container">
             {places.map((place, index) => {
                 return (
                     <div key={place._id} className="places-list">
                         <ul>
-                            <li className="single-place"><img src={place.image} alt={place.name}/>
+                            <li><img src={place.image} alt={place.name} className="single-place"/>
                                 <Link to={`/${place._id}`}>
-                            {place.name}
-                            </Link></li>
+                            {place.name}</Link>
+                            </li>
                         </ul>
                     </div>
                 );
