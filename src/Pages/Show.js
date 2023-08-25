@@ -15,7 +15,7 @@ function Show(props) {
     //
 
     return (
-        <div>
+        <div className="show-container1">
         <div className="place-container">
             
             <div className="place-display">
@@ -34,6 +34,7 @@ function Show(props) {
             </div>
         </div>
 
+        <div className="show-container2">
         <div className="edit-form">
             <h2 className="edit-place-name">Edit {place.name}</h2>
             <Form action={`/update/${place._id}`} method="post">
@@ -71,6 +72,7 @@ function Show(props) {
                      <input type="submit" value="Delete Place" className="buttons"/>
                 </Form>
             </div>
+        </div>
         </div>
     )
 }
