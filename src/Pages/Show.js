@@ -35,24 +35,32 @@ function Show(props) {
         </div>
 
         <div className="edit-form">
-            <h2>Edit {place.name}</h2>
+            <h2 className="edit-place-name">Edit {place.name}</h2>
             <Form action={`/update/${place._id}`} method="post">
                 <label htmlFor="name">Name of Place: </label>
                 <input type="text" name="name" placeholder="Place's Name" defaultValue={place.name} />
+                <br/>
                 <label htmlFor="type">Type of Place: </label>
-                <input type="text" name="type" placeholder="Place's Type" defaultValue={place.type} /><br/>
+                <input type="text" name="type" placeholder="Place's Type" defaultValue={place.type} />
+                <br/>
                 <label htmlFor="country">Location (Country): </label>
                 <input type="text" name="country" placeholder="Place's Country" defaultValue={place.country} />
+                <br/>
                 <label htmlFor="image">Image URL of Place: </label>
                 <input type="text" name="image" placeholder="Place's Image URL" defaultValue={place.image} />
+                <br/>
                 <label htmlFor="url">Website: </label>
                 <input type="text" name="url" placeholder="Place's Url" defaultValue={place.url} />
+                <br/>
                 <label htmlFor="notes">Additional Notes: </label>
                 <input type="text" name="notes" placeholder="Place's Notes" defaultValue={place.notes} />
+                <br/>
                 <label htmlFor="seasonToGo">Best Season to Go: </label>
                 <input type="text" name="seasonToGo" placeholder="Best Season To Go" defaultValue={place.seasonToGo} />
+                <br/>
                 <label htmlFor="visited">Visited yet? </label>
                 <input type="checkbox" name="visited" value={checked} onChange={handleChange} />
+                <br/>
                 <input type="submit" value="Update Place" className="buttons"/>
             </Form>
         </div>
