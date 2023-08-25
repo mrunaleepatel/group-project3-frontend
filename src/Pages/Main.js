@@ -1,8 +1,11 @@
 import {Outlet, Link} from 'react-router-dom';
+import Typewriter from "typewriter-effect";
 
 function Main(props){
     return <div>
-        <h1>Where Dream Destinations Await</h1>
+        <div className="typewriter">
+            <h1>Where Dream Destinations Await</h1>
+        </div>
         
         
         <Link to="/signup"><button className='buttons' >Signup</button></Link>
