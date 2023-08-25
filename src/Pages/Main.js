@@ -1,5 +1,4 @@
 import {Outlet, Link} from 'react-router-dom';
-import Typewriter from "typewriter-effect";
 
 function Main(props){
     return <div>
