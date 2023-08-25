@@ -1,6 +1,7 @@
+// imports
 import {Link, useLoaderData, Form } from "react-router-dom";
-import { baseUrl } from "../base_url";
-// auto complete
+
+// imports for  auto complete for COUNTRY input
 import axios from "axios";
 import {Input, Card} from "antd"
 import React, { useEffect, useState } from "react";
@@ -47,7 +48,7 @@ function Index(props) {
         <div>
 
             <div className="create-form">
-            <h2>Add A New Place</h2>
+            {/* <h2>Add A New Place</h2> */}
             <Form action="/create" method="post">
                 <label htmlFor="name">Name of Place: </label>
                 <input type="text" name="name" placeholder="Trevi Fountain" required/>
@@ -77,17 +78,17 @@ function Index(props) {
                     </div>
                 ))}
 
+                <label htmlFor="url">Website of Place: </label>
+                <input type="text" name="url" placeholder="https://romesite.com/trevi-fountain.html" />
                 <label htmlFor="image">Image URL of Place: </label>
                 <input type="text" name="image" placeholder="https://romesite.com/images/trevi_fountain.jpg" />
-                <label htmlFor="url">Website: </label>
-                <input type="text" name="url" placeholder="https://romesite.com/trevi-fountain.html" />
                 <label htmlFor="seasonToGo">Best Season to Go: </label>
                 <input type="text" name="seasonToGo" placeholder="Spring and Fall" /><br/>
                 <label htmlFor="notes">Additional Notes: </label>
                 <input type="text" name="notes" placeholder="The Lizzie McGuire Movie" /> <br/>
                 <label htmlFor="visited">Visited yet? </label>
                 <input type="checkbox" name="visited" value={checked} onChange={handleChange} /><br/>
-                <input type="submit" value="Add Place" className="buttons"/>
+                <input type="submit" value="Create" className="create-button"/>
             </Form>
             </div>
 
@@ -96,17 +97,11 @@ function Index(props) {
                 return (
                     <div key={place._id} className="places-list">
                         <ul>
-                            <li><Link to={`/${place._id}`}>
+                            <li className="single-place"><img src={place.image} alt={place.name}/>
+                                <Link to={`/${place._id}`}>
                             {place.name}
                             </Link></li>
                         </ul>
-                        {/* <p>{place.type}</p>
-                        <p>{place.country}</p>
-                        <img src={place.image} alt={place.name} />
-                        <p>{place.url}</p>
-                        <p>{place.notes}</p>
-                        <p>{place.seasonToGo}</p>
-                        <p>{place.visited ? "visited" : "not visited"}</p> */}
                     </div>
                 );
             })}
@@ -116,4 +111,4 @@ function Index(props) {
     )
 }
 
-export default Index
+export default Index;
