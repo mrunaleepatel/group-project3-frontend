@@ -44,3 +44,9 @@ HTML, CSS, SASS, JavaScript, MongoDB, Express.js, ReactJS
 ### MOBILE VIEWS
 ![Mobile view of Index page](./src/Images/P3-Index-Mobile-Wireframe.jpeg)
 ![Mobile view of Show page](./src/Images/P3-Show-Mobile-Wireframe.jpeg)
+
+## Mockup video 
+
+
+https://github.com/mrunaleepatel/group-project3-frontend/assets/130593688/d3c484f9-0882-441e-8c3a-c614005361cd
+
