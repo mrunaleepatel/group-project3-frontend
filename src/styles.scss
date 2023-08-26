@@ -87,7 +87,7 @@ h1 {
 
   @keyframes typing {
     from { width: 0 }
-    to { width: 31% }
+    to { width: 100% }
   }
   
 
@@ -293,7 +293,7 @@ img {
     .show-image {
         height: 70%;
         width: 80%;
-        margin-top: 10px;    
+        margin-top: 100px;    
         border-radius: 1rem;
         overflow: hidden;
         box-shadow: 0px 7px 10px rgba(black, 0.4);
@@ -620,7 +620,7 @@ img {
 }
 
 // media queries for animation text 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) and  (min-width: 480px) {
     .typewriter {
       display: flex;
       justify-content: center;
