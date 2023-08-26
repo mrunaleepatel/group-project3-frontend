@@ -34,7 +34,7 @@ function Show(props) {
             </div> */}
         </div>
 
-        <div className="show-container2">
+       
         <div className="edit-form">
             {/* <h2 className="edit-place-name">Edit {place.name}</h2> */}
             <Form action={`/update/${place._id}`} method="post">
@@ -64,16 +64,17 @@ function Show(props) {
                 <br/>
                 <input type="submit" value="Update Place" className="buttons"/>
             </Form>
-        </div>
-            
             <div>
             {/* <h2>Delete {place.name}</h2> */}
-                <Form action={`/delete/${place._id}`} method="post" className="delete-button">
-                     <input type="submit" value="Delete Place"/>
+                <Form action={`/delete/${place._id}`} method="post" >
+                     <input type="submit" value="Delete Place" className="buttons"/>
                 </Form>
             </div>
         </div>
+            
+            
         </div>
+       
     )
 }
 

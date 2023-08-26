@@ -307,43 +307,66 @@ img {
 
 // DEAL WITH OPACITY
 .edit-form {
-            margin-top: 20px;
-            text-align: left;
-            font-family: 'Exo', sans-serif;
-            color: white;
-            padding-left: 20px;
-            padding-top: 10%;
-            padding-bottom: 10%;
-        }
+    margin-top: 0px;
+    text-align: left;
+    font-family: 'Exo', sans-serif;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+//     input[type="submit"] {
+//         background: #F37053;
+//         color: #fff;
+//         border: none;
+//         cursor: pointer;
+//         border-radius: 20px;
+//     }
+
+//     input[type="submit"]:hover {
+//         background: #F6AFCE;
+//         color: purple;
+//     }
+
+
 
 .delete-button input{
-            display: block;
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 .delete-button input[type="submit"] {
-    background: #F37053;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
+background: #F37053;
+color: #fff;
+border: none;
+cursor: pointer;
+border-radius: 20px;
 }
 
 .delete-button input[type="submit"]:hover {
-    background: #F6AFCE;
-    color: purple;
+background: #F6AFCE;
+color: purple;
 }
-    
+
 
 .show-place-name {
-    color:  whitesmoke;
-    font-family: 'Righteous', cursive;
+color:  whitesmoke;
+font-family: 'Righteous', cursive;
 }
 
-
+}
 /// FORMS
 /////////////////////
 
