@@ -127,7 +127,7 @@ h1 {
     overflow: hidden;
     width: 0;
     // border-right: 1px solid white;
-    animation: typing 7s forwards;
+    animation: typing 7s forwards infinite;
       }
   }
 
@@ -211,6 +211,7 @@ img {
     li:hover {
         text-decoration: underline white;
     }
+
 
 
 /// MAIN 
@@ -637,7 +638,7 @@ img {
     }
 }
 
-@media (max-width: 5120px) {
+@media (max-width: 1000px) {
     .header {
         display: flex;
         justify-content: space-between;
@@ -723,3 +724,26 @@ img {
         margin-bottom: 20px;
     }
 }
+
+// media queries for animation text 
+@media (max-width: 767px) {
+    .typewriter {
+      display: flex;
+      justify-content: center;
+      
+      h1 {
+        position: relative;
+        margin: 1rem auto;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        animation: typing 15s forwards infinite; 
+        font-size: 20px;
+      }
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+    }
+  }
