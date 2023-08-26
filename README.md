@@ -7,6 +7,8 @@
 
 [**Link to Group Trello**](https://trello.com/b/8FuriwSl/ga-seir-kale-p3)
 
+![new-color](https://github.com/mrunaleepatel/group-project3-frontend/assets/130593688/42656546-2c80-4c42-8b25-0749989b6880)
+
 
 ### Description of Project
 BonVoyage! Your personalized digital companion to streamline and enhance your travel aspirations! Effortlessly create and manage destinations you’ve visited and wish to visit. With BonVoyage, each destination becomes a chapter and every adventure is crafted to reflect your desires.
