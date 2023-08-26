@@ -49,7 +49,7 @@ body {
 body::before {
     content: "";
     display: block;
-    position: absolute;
+    position: fixed ;
     top: 0;
     left: 0;
     width: 100%;
@@ -70,52 +70,6 @@ h1 {
     color: whitesmoke;
 }
 
-
-// .typewriter {
-//     position: relative;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     font-size: 24px;
-//     animation: blink 0.5s ease infinite alternate-reverse;
-//   }
-  
-//   @keyframes typing {
-//     from {
-//       width: 0;
-//     }
-//     to {
-//       width: 100%;
-//     }
-//   }
-  
-//   @keyframes blink {
-//     from {
-//       opacity: 100%;
-//     }
-  
-//     to {
-//       opacity: 10%;
-//     }
-//   }
-  
-// .typewriter {
-//     position: relative;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     font-size: 24px;
-//     width: 0; 
-//     animation: typing 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite 
-//   }
-  
-//   @keyframes typing {
-//     from {
-//       width: 0;
-//     }
-//     to {
-//       width: 100%;
-//     }
-//   }
-
 // Text animation for Main/Dashboard
 .typewriter {
     display: flex;
@@ -135,25 +89,6 @@ h1 {
     from { width: 0 }
     to { width: 31% }
   }
-  
-//   @keyframes typing {
-//     0% {
-//       width: 0;
-//     }
-//     100% {
-//       width: 100%;
-//     }
-//   }
-  
-//   @keyframes blink {
-//     0%,
-//     100% {
-//       border-color: transparent
-//     }
-//     50% {
-//       border-color: white
-//     }
-//   }
   
 
 /// HEADER
@@ -454,85 +389,29 @@ img {
 
 // CREATE FORM
 // Close to styling we want for the dropdown menu
-.create-form {
-    background-color: whitesmoke;
-    width: 40%;
-    margin: 0 auto;
-    border: 1px solid black;
-    padding: 1rem;
-    text-align: left;
-
-    label {
-        display: inline-block;
-        color: black;
-        font-family: 'Exo', sans-serif;
-        font-size: 15px;
-        margin-right: 1rem;
-    }
-
-    input {
-        width: 60%;
-        height: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-    }
-
-    input[type="submit"] {
-        background: #F37053;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        border-radius: 20px;
-        padding: 0.5rem 1rem; // Adding padding to match your design
-        font-size: 16px; // Adding font size to match your design
-    }
-
-    input[type="submit"]:hover {
-        background: #F6AFCE;
-        color: purple;
-    }
-}
-
-// // HARP CREATE FORM \\
 // .create-form {
-//     width: 100%;
-//     max-width: 500px;
+//     background-color: whitesmoke;
+//     width: 40%;
 //     margin: 0 auto;
-//     background: rgba(255, 255, 255, 0.1);
-//     padding: 20px;
-//     border-radius: 10px;
-//     margin-top: 20px;
-
-//     h2 {
-//         text-align: center;
-//         margin-bottom: 1rem;
-//         font-family: "Ayuthaya";
-//         color: whitesmoke;
-//         text-decoration: underline;
-//         padding-bottom: 1px;
-//     }
+//     border: 1px solid black;
+//     padding: 1rem;
+//     text-align: left;
 
 //     label {
-//         display: block;
-//         margin-bottom: 5px;
-//         color: whitesmoke;
+//         display: inline-block;
+//         color: black;
 //         font-family: 'Exo', sans-serif;
 //         font-size: 15px;
+//         margin-right: 1rem;
 //     }
 
 //     input {
-//         width: 100%;
+//         width: 60%;
+//         height: 100%;
 //         padding: 0.5rem;
 //         border: 1px solid #ccc;
 //         border-radius: 5px;
 //         margin-bottom: 1rem;
-//         font-size: 14px;
-//     }
-
-//     input[type="checkbox"] {
-//         margin-right: 5px;
 //     }
 
 //     input[type="submit"] {
@@ -541,8 +420,8 @@ img {
 //         border: none;
 //         cursor: pointer;
 //         border-radius: 20px;
-//         padding: 0.5rem 1rem;
-//         font-size: 16px;
+//         padding: 0.5rem 1rem; // Adding padding to match your design
+//         font-size: 16px; // Adding font size to match your design
 //     }
 
 //     input[type="submit"]:hover {
@@ -550,6 +429,62 @@ img {
 //         color: purple;
 //     }
 // }
+
+// HARP CREATE FORM \\
+.create-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: "Ayuthaya";
+        color: whitesmoke;
+        text-decoration: underline;
+        padding-bottom: 1px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: whitesmoke;
+        font-family: 'Exo', sans-serif;
+        font-size: 15px;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    input[type="submit"] {
+        background: #F37053;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background: #F6AFCE;
+        color: purple;
+    }
+}
 
 // EDIT FORM
 .edit-form {
@@ -638,7 +573,7 @@ img {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 5120px) {
     .header {
         display: flex;
         justify-content: space-between;
