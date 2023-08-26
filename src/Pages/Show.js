@@ -23,7 +23,7 @@ function Show(props) {
                 <h1 className="show-place-name">{place.name}</h1> 
             </div>
 
-            <div className="place-details">
+            {/* <div className="place-details">
                 <h3>Country: {place.country}</h3>
                 <h3>Type: {place.type}</h3>
                 <h3><a href={place.url}>Website</a></h3>
@@ -31,12 +31,12 @@ function Show(props) {
                 <p>{place.notes}</p>
                 <h3>Season to Go: {place.seasonToGo}</h3>
                 <h3>Visited?: {place.visited ? "visited" : "not visited"}</h3>
-            </div>
+            </div> */}
         </div>
 
         <div className="show-container2">
         <div className="edit-form">
-            <h2 className="edit-place-name">Edit {place.name}</h2>
+            {/* <h2 className="edit-place-name">Edit {place.name}</h2> */}
             <Form action={`/update/${place._id}`} method="post">
                 <label htmlFor="name">Name of Place: </label>
                 <input type="text" name="name" placeholder="Place's Name" defaultValue={place.name} />
@@ -66,10 +66,10 @@ function Show(props) {
             </Form>
         </div>
             
-            <div className="delete-button">
-            <h2>Delete {place.name}</h2>
-                <Form action={`/delete/${place._id}`} method="post">
-                     <input type="submit" value="Delete Place" className="buttons"/>
+            <div>
+            {/* <h2>Delete {place.name}</h2> */}
+                <Form action={`/delete/${place._id}`} method="post" className="delete-button">
+                     <input type="submit" value="Delete Place"/>
                 </Form>
             </div>
         </div>
