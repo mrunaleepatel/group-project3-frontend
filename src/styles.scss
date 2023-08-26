@@ -283,13 +283,6 @@ img {
     display: flex;
 }
 
-.show-container2 {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 50%;
-    margin-bottom: 20px;
-}
-
 .place-container {
     margin-top: 20px;
     font-family: 'Exo', sans-serif;
@@ -298,8 +291,8 @@ img {
     margin-bottom: 20px;
 
     .show-image {
-        height: 80vh;
-        width: 85vh;
+        height: 70%;
+        width: 80%;
         margin-top: 10px;    
         border-radius: 1rem;
         overflow: hidden;
@@ -572,69 +565,56 @@ img {
 // mobile - show
 
 @media (max-width: 770px) {
-    .header {
+   
+    .show-container1 {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        padding: 5px;
-        padding-left: 15px;
-        background: #F37053;
-        font-family: "Ayuthaya";
-        font-size: 18px;
-        font-weight: 600;
-        
-        .navbar {
-            margin-top: 10px;
-        }
-
-        .navbar ul {
-            flex-direction: column;
-            margin: 0;
-        }
-
-        .navbar li {
-            margin-left: 0;
-            margin-bottom: 5px;
-        }
     }
-
+    
     .place-container {
-        margin-top: 5px;
-        background-color: beige;
-        font-family: 'Exo', sans-serif;
-    }
 
-    .show-image {
-        margin-top: 10px;
-        width: 95%;
+        .show-image {
+            height: 100%;
+            width: 100%;  
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0px 7px 10px rgba(black, 0.4);
+        }
+        
     }
-
-    .place-details {
-        text-align: left;
-        padding-left: 20px;
-    }
-
+    
+    // DEAL WITH OPACITY
     .edit-form {
-        background-color: beige;
-        margin-top: 5px;
-        text-align: left;
-        font-family: 'Exo', sans-serif;
-        padding-left: 20px;
+                text-align: left;
+                font-family: 'Exo', sans-serif;
+                color: white;
+            }
+    
+    .delete-button input{
+                display: block;
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-bottom: 1rem;
     }
-
-    .edit-place-name {
-        text-align: center;
-        font-family: 'Righteous', cursive;
+    .delete-button input[type="submit"] {
+        background: #F37053;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
     }
-
+    
+    .delete-button input[type="submit"]:hover {
+        background: #F6AFCE;
+        color: purple;
+    }
+        
+    
     .show-place-name {
-        color: black;
-        font-family: 'Righteous', cursive;
-    }
-
-    .delete-button {
-        background-color: beige;
-        margin-top: 5px;
+        color:  whitesmoke;
         font-family: 'Righteous', cursive;
     }
 }
